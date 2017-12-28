@@ -1,0 +1,71 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=Shift-JIS">
+	<title> Hardeining 報告書作成支援ツール </title>
+	<link type="text/css" rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css" />
+	<script src="src/jquery-1.12.3.min.js"> </script>
+	<script src="src/bootstrap/js/bootstrap.min.js"> </script>
+	<script type="text/javascript" src="index.js"> </script>
+
+	<style type="text/css">
+	#tbody2 tr:first-child {
+		display: none;
+	}
+	table {
+		class: form-group;
+	}
+	input {
+		margin: 5px 3px 5px 3px;
+	}
+	.separate {
+		margin: 0px 10px 0px 10px;
+	}
+	</style>
+
+</head>
+<body >
+	<h3>＜インシデント概要＞</h3>
+	<table id="table1">
+		<script type="text/javascript">
+		GetTime("table1","");
+		CreateInputForm(input_data);
+		CreateRadio(charge_data);
+		CreateTextForm("内容:", "content", 10);
+		</script>
+		<tr>
+		<td></td>
+		</tr>
+	</table>
+
+	<h3>＜作業履歴＞</h3>
+	<table id="table2" class="table">
+		<thead>
+			<tr>
+				<th> 対処内容 </th>
+				<th> 追加/削除 </th>
+			</tr>
+		</thead>
+		<tbody id="tbody2">
+			<tr>
+				<td scope="row"><textarea class="form-control" cols="40" rows="3"> </textarea></td>
+				<td scope="row">
+					<input value="+"type="button" class="btn btn-default addList" />
+					<input value="-" type="button" class="btn btn-default removeList"/>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3>＜原因の究明＞</h3>
+	<textarea id="source1" name="source" class="form-control" cols="50" rows="10"> </textarea>
+  <h3>↓</h3>
+	<input type="button" id="btn_output" class="btn btn-default" onClick="OutputTicket()" style="margin: 5px 0px;" value="PukiWiki形式で出力"><br>
+		<textarea id="output_ticket" name="ticket" class="form-control" cols="40" rows="15"></textarea>
+	</div>
+
+	<div class="separate" style="float:right; width:40%;">
+</body>
+</html>
