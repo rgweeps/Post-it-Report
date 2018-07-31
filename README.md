@@ -1,7 +1,5 @@
-作業報告書作成支援ツール
-====
-
-## 概要
-Hardeing での作業報告書作成を支援するツールです．  
-PukiWiki を用いた文書整形を想定しています．  
-Firefox 57.0.2 (64bit) で動作確認しています．
+# Post-it-Report
+This is a web application that supports your creation of "incident response report" in PukiWiki.  
+Especially, it is assumed to be used at security contests as follows.  
+* [Hardening Project](http://wasforum.jp/hardening-project/)
+* [Crisis Management Contest](http://www.riis.or.jp/symposium22/crisismanagement/purpose/)
